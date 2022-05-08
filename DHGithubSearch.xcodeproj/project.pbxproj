@@ -47,6 +47,7 @@
 		6EE556A8282825C200BD827D /* DHGithubSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHGithubSearchUITests.swift; sourceTree = "<group>"; };
 		6EE556AA282825C200BD827D /* DHGithubSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHGithubSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6EE556B92828271E00BD827D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6EE556C2282834A000BD827D /* HTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HTTPClient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				6EE55686282825C000BD827D /* DHGithubSearch */,
+				6EE556C12828348500BD827D /* Packages */,
 				6EE5569D282825C200BD827D /* DHGithubSearchTests */,
 				6EE556A7282825C200BD827D /* DHGithubSearchUITests */,
 				6EE55685282825C000BD827D /* Products */,
@@ -154,6 +156,14 @@
 				6EE556B92828271E00BD827D /* SearchViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		6EE556C12828348500BD827D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				6EE556C2282834A000BD827D /* HTTPClient */,
+			);
+			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

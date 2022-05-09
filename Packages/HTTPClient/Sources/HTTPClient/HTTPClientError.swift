@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HTTPClientError: Error {
+public enum HTTPClientError: Error {
     case forbidden
     case notFound
     case unknown

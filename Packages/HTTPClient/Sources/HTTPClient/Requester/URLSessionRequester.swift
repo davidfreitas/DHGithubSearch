@@ -7,8 +7,10 @@
 
 import Foundation
 
-final class URLSessionRequester: HTTPRequester {
-    func get(baseURL: URL, path: String, queryItems: [URLQueryItem], headers: [String: String]) async throws -> HTTPRequesterResponse {
+public final class URLSessionRequester: HTTPRequester {
+    public init() {}
+    
+    public func get(baseURL: URL, path: String, queryItems: [URLQueryItem], headers: [String: String]) async throws -> HTTPRequesterResponse {
         let request = URLRequest.create(
             url: baseURL.appendingPathComponent(path),
             method: "GET",

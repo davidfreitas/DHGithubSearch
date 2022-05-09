@@ -7,24 +7,18 @@
 
 import Foundation
 
-final class HTTPClient {
+public final class HTTPClient {
     private let baseURL: URL
     private let requester: HTTPRequester
     
-    init(baseURL: URL, requester: HTTPRequester) {
+    public init(baseURL: URL, requester: HTTPRequester) {
         self.baseURL = baseURL
         self.requester = requester
     }
     
-    func get<V: Decodable>(path: String, queryItems: [URLQueryItem], headers: [String: String]) async -> Result<V, HTTPClientError> {
-        do {
-            let result = try await requester.get(baseURL: baseURL, path: path, queryItems: queryItems, headers: headers)
-            return .success(try handleRequestResult(result))
-        } catch let error as HTTPClientError {
-            return .failure(error)
-        } catch {
-            return .failure(HTTPClientError.unknown)
-        }
+    public func get<V: Decodable>(path: String, queryItems: [URLQueryItem], headers: [String: String]) async throws -> V {
+        let result = try await requester.get(baseURL: baseURL, path: path, queryItems: queryItems, headers: headers)
+        return try handleRequestResult(result)
     }
     
     private func handleRequestResult<V: Decodable>(_ result: HTTPRequesterResponse) throws -> V {

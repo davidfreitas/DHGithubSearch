@@ -7,8 +7,8 @@
 
 import Foundation
 
-typealias HTTPRequesterResponse = (data: Data, statusCode: Int)
+public typealias HTTPRequesterResponse = (data: Data, statusCode: Int)
 
-protocol HTTPRequester {
+public protocol HTTPRequester {
     func get(baseURL: URL, path: String, queryItems: [URLQueryItem], headers: [String: String]) async throws -> HTTPRequesterResponse
 }
